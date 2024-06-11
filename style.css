@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Be Vietnam Pro";
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+/********************************* HEADER *********************************/
+
+.grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding-block: 3%;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-block: 0;
+  padding-inline: 5% 0;
+  text-transform: uppercase;
+  align-content: center;
+  _font-size: calc(0.6rem + 0.5vw);
+  font-weight: 100;
+  word-spacing: 1%;
+  letter-spacing: 0.1rem;
+}
+
+.header-logo > img {
+  padding-right: 0.4rem;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+  padding-inline: 1%;
+  color: inherit;
+  font-size: 1.2rem;
+  _font-size: calc(0.6rem + 0.5vw);
+  text-decoration: underline;
+  text-decoration-color: hsl(0, 0%, 80%);
+  text-underline-offset: 0.3rem;
+  transition: text-underline-offset 200ms;
+}
+
+.nav-item:hover {
+  text-underline-offset: 0.2rem;
+  text-decoration-color: hsl(0, 0%, 0%);
+}
+
+@media screen and (max-width: 1028px) {
+  .header-logo > p {
+    font-size: 0.75rem;
+  }
+  .header-logo > img {
+    width: 37px;
+    height: 32px;
+  }
+
+  .nav-item {
+    font-size: 0.75rem;
+  }
+  .flex-text {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header-logo {
+    font-size: 0.6rem;
+  }
+  .header-logo > img {
+    width: 31px;
+    height: 27px;
+  }
+
+  .nav-item {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-header {
+    grid-template-columns: 1fr;
+  }
+
+  .header-logo {
+    font-size: 1rem;
+    justify-content: center;
+    padding-inline: 0 0;
+  }
+  .header-logo > img {
+    width: 31px;
+    height: 27px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+/********************************* MAIN *********************************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.grid-item {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+}
+
+.flex-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.flex-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7%;
+}
+
+.flex-info > h3 {
+  font-family: "Abyssinica Sil";
+  font-size: 1.5rem;
+  margin-block: 0;
+}
+
+.flex-info > p {
+  text-align: center;
+  font-family: "Be Vietnam Pro";
+  line-height: 2rem;
+  _font-size: calc(0.7rem + 0.5vw);
+  font-weight: 100;
+}
+
+.flex-info > a {
+  background-color: hsl(0, 0%, 0%);
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 85%;
+  transition: background-color ease-in-out 100ms;
+}
+
+.flex-info > a:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  outline: 0.1rem solid black;
+}
+
+@media screen and (max-width: 780px) {
+  .flex-info > h3 {
+    font-size: 90%;
+  }
+  .flex-info > p {
+    font-size: 70%;
+    line-height: 150%;
+  }
+  .flex-info > a {
+    padding-block: 0.2rem;
+    padding-inline: 0.6rem;
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-info > h3 {
+    font-size: 100%;
+  }
+  .flex-info > p {
+    font-size: 80%;
+    line-height: 100%;
+  }
+}
+
+/********************************* FOOTER *********************************/
+
+.footer {
+  background-color: black;
+}
+
+.footer-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 4rem 2rem;
+  color: white;
+  font-weight: 100;
+}
+
+.footer-1 {
+  text-align: center;
+}
+
+.footer-2 {
+  padding-top: 2rem;
+}
+
+.footer-1 > p {
+  margin-block: 0;
+  font-weight: 500;
+}
+
+.footer-2 > a {
+  text-decoration: none;
+  color: white;
+  _font-size: calc(0.6rem + 0.5vw);
+  font-size: 0.75rem;
+}
+
+.footer-2 > a:nth-child(2) {
+  margin-left: 1rem;
+}
+
+.footer-img {
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 1028px) {
+  .footer-article {
+    padding-block: 3% 2%;
+  }
+  .footer-2 {
+    padding-top: 1%;
+  }
+  .footer-img {
+    width: 45%;
+  }
+}
